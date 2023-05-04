@@ -1,0 +1,86 @@
+1) Identify the problem or goal:
+
+   - To create a program that allows users to play a game of Blavingad against the computer.
+   
+2) List the major functions:
+
+	a. Print the rules of the game.
+	b. Ask the user if they want to play a round.
+	c. Validate user input.
+	d. Generate a random move for the computer.
+	e. Determine the winner of the round.
+	f. Keep track of the number of rounds, user wins, and computer wins.
+	g. Ask the user if they want to continue playing.
+	h. Print the final statistics.
+	
+3) Break down the functions into smaller sub-functions:
+
+	a. Print the rules of the game:
+		* use System.out.println(); to print rules in the main function.
+		
+	b. Ask the user if they want to play a round:
+		* Define variables to store the number of rounds, user wins, and computer wins.
+		* use System.out.println(); to print question.
+		* use Scanner to get user input.
+		* use if else statements inside of the while loop 
+		to run the code based on the user's response until user says no.
+		(e.g. if user input is "n" stop the code)
+		* if user said "y", add number of rounds play and run the function for user input and computer move, and game.
+		
+	c. Prompt the user for input.
+		* use scanner to get user move (ask to put a number between [0,4].)
+		* use a while loop to get user input until user type in valid number
+		ex) while (userMove != 0 && userMove != 1 && ...){
+			System.out.println("Invalid number please...");
+			userInput = scanner.nextInt();
+			}
+		* if your input is valid then use System.out.println("Your move is " + );
+		* return user move.
+		
+
+	d. Generate a random move for the computer:
+		* Use the "random" module to generate a random integer between 0 and 4.
+		* use System.out.println("Computer's move is " + );
+		* return computer move.
+		
+	e. Map the integer to a move.
+		* create a function that convert int move into String.
+		* this function takes int parameter which is returned user move and computer move.
+		ex) public static String convertMove(int move){
+			if (move == 0) {
+				return "Uppsta";
+			}
+			...
+	f. Determine the winner of the round
+	 	* Use a series of if-else statements to determine the winner based on the rules.
+	 	* make the function returns true if the user wins.
+	 	* Use int user move and int computer move as parameters.
+	 	
+	 	ex) public static boolean game(int user, int com){
+	 		if (user == UPPSTA && (com == "    " || com == "   ")){
+	 			System.out.println("You won");
+	 			return true;
+	 		} else if(){
+	 		...
+	 		}
+	 
+	g. Keep track of the number of rounds, user wins, and computer wins
+		* create a function that uses games output as a parameter.
+		* create int userWin = 0;
+		* use if statement to count user wins
+		ex) public static int userWon(boolean userwin){
+			int userWin =0;
+			if (userwin){
+				userWin ++;
+			} return userWin;
+
+
+	h. Ask the user if they want to continue playing:
+		* repeat 
+		
+
+4) Determine the data structures and algorithms needed:
+
+	a. Use lists to store the valid moves and the rules.
+	b. Use if-else statements to determine the winner.
+	c. Use a while loop to keep playing rounds until the user decides to quit.
